@@ -21,6 +21,16 @@
         <p>O website do Vale Lab 4, da Universidade da Califórnia, disponibiliza um artigo intitulado “Sharing memory between processes”, tratando do compartilhamento de memória entre processos. Neste site há uma explicação teórica sobre o assunto e também uma prática para a criação de segmentos de memória para serem compartilhados entre processos em linguagem C.</p>
     
     <h2>2. Uso de processos e threads</h2>
+        <p>Com a evolução dos sistemas, a forma tradicional de um processo, executado em um único fluxo, tornou-se insuficiente para o compartilhamento de recursos entre atividades relacionadas. Uma nova solução foi proposta aprimorando-se a noção de processo e associando múltiplas atividades (threads), para que assim fosse possível ocorrer a distribuição do processamento e a tarefa não precisasse mais ser sequencial.</p>
+        <p>Na figura 2, é possível visualizar a execução sequencial de um processo, ficando o processador, a memória e os demais recursos computacionais alocados de forma dedicada até o final da tarefa. A figura 2 é descrita com três itens: processo, execução e término. O passo 1 é o início do processo, com a alocação dos recursos; já o passo 2 é a execução do processo, ficando todos os recursos alocados até que o processo seja finalizado; e, finalmente, no passo 3 ocorre o término da execução do processo.</p>
+        <p>A Figura 2 apresenta três itens, dispostos em sequência de forma linear representando os passos da execução sequencial de um processo. São eles: 1 - processo, 2- execução e 3 -término.
+        Figura 2 – Fluxo linear</p>
+        <p>Já as threads são criadas dentro de processos, e os processos possuem no mínimo uma linha de execução, conforme é ilustrado na figura 3. Na imagem, temos um único processo com três threads, sendo cada thread associada a um processador e ocorrendo o processamento simultâneo.</p>
+        <p>A Figura 3 apresenta um círculo grande nomeado como processo, e dentro deste círculo têm três círculos menores identificados como Thread 1, Thread 2 e Thread 3, respectivamente. Em cada círculo menor tem uma linha que conecta em um quadrado. Os quadrados estão identificados como CPU 1, CPU 2 e CPU 3.</p>
+        <p>Figura 3 – Threads</p>
+        <p>Para elucidar o conceito de processos e threads, vejamos esta analogia feita por Coulouris, Dollimore e Kindberg (2007):</p>
+        <p>Um ambiente de execução consiste em um jarro tampado com ar e o alimento dentro dele. Inicialmente há uma mosca – uma thread – no jarro. Essa mosca, assim como suas descendentes, pode produzir outras moscas e matá-las. Qualquer mosca pode consumir qualquer recurso (ar ou alimento) no jarro. As moscas podem ser programadas para entrarem em uma fila, de maneira ordenada, para consumir recursos. Se não tiverem essa disciplina, elas podem se chocar umas com as outras dentro do jarro – isto é, colidir e produzir resultados imprevisíveis ao tentarem consumir os mesmos recursos de maneira não controlada. As moscas podem se comunicar com (enviar mensagens para) moscas de outros jarros, mas nenhuma pode escapar do jarro e nenhuma mosca de fora pode entrar nele.(COULOURIS; DOLLIMORE; KINDBERG, 2007, p. 206)</p>
+        <p>CONTINUE</p>
     
     
     <h2>3. Implementação de mutex e semáforo</h2>
