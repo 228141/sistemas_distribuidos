@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02</title>
+</head>
+<body>
+    <h1>Sistemas Concorrentes</h1>
+
+    <h2>Introdução</h2>
+        <p>Os sistemas concorrentes têm como origem a existência de vários processos ou threads executados de forma colaborativa para uma mesma tarefa, sendo que os sistemas nos quais estão inseridos podem conter um único processador ou múltiplos processadores. No caso de um único processador, os processos se revezam conforme os parâmetros de escalonamento estabelecidos pelo sistema operacional. E, no caso de múltiplos processadores, as tarefas podem ser executadas em vários processadores, com cada tarefa sendo executada em um processador diferente. Evidentemente, em sistemas concorrentes, deve ocorrer o compartilhamento de recursos. Por isso, os processos concorrentes precisam ser sincronizados para garantir a sua correta interpretação e evitar problemas na aplicação.</p>
+        <p>O objetivo deste capítulo é apresentar os sistemas concorrentes e demonstrar como funciona o compartilhamento de recursos, o uso de processos e threads, além da implementação de controles para as regiões críticas por mecanismos de exclusão mútua, mutex e semáforo.</p>
+    
+    <h2>1. Os sistemas concorrentes e a memória compartilhada</h2>
+        <p>Dentro do ambiente de sistemas distribuídos, os aplicativos fornecem recursos que são compartilhados pelos usuários, e dessa forma pode ocorrer acesso concomitante ao recurso compartilhado. A estratégia de aceitar um pedido de cliente por vez limita o funcionamento do sistema, e, portanto, a permissão para que vários pedidos de clientes sejam processados concorrentemente se torna a melhor estratégia. Para que se tenha sucesso nessa operação, é necessário que o processo em um sistema distribuído seja responsável por garantir a operação correta em um ambiente concorrente, obedecendo aos critérios de compartilhamento. O gerenciamento e a operação do uso concorrente podem ser realizados utilizando-se semáforos e locks, que estão disponíveis nos sistemas operacionais. Caso esses critérios não sejam seguidos, poderá ocorrer inconsistência nos dados (COULOURIS; DOLLIMORE; KINDBERG, 2007). e Van Steen (2008) informam que as aplicações concorrentes podem usar diversos métodos de comunicação. Um dos exemplos é o uso de memória compartilhada entre os processos ou através da troca de mensagens entre processos em execução.</p>
+        <p>A memória compartilhada é um mecanismo de comunicação utilizado através de um buffer, que é compartilhado entre os processos para as operações de escrita e leitura, e na operação de escrita o processo grava dados no buffer somente quando este estiver vazio. Já na operação de leitura, um processo lê dados no buffer quando existe algo. A sincronização é o mecanismo que coloca os processos para aguardar a sua execução, evitando conflitos (MACHADO; MAIA, 2017).</p>
+        <p>A figura 1 ilustra esse comportamento. No lado esquerdo, temos o processo escrita, e no lado direito o processo leitura. Entre os processos escrita e leitura há uma seta bidirecional que realiza o sincronismo entre a escrita e a leitura. Abaixo dos dois processos, há a representação do buffer recebendo a entrada de dados do processo escrita e da saída dos dados para o processo leitura.</p>
+        <p>Os processos concorrentes devem se comunicar ao realizar qualquer atividade no conteúdo da memória compartilhada através de estratégias bem definidas. Entre essas estratégias, destacam-se exclusão mútua, semáforo e gerenciamento (LYNCH, 1996). Para alcançar esse objetivo, as linguagens de programação devem prover suporte para a concorrência. Um dos exemplos é a linguagem de programação Python, que utiliza o modelo de memória compartilhada com o bloqueio de acesso realizado por monitores.</p>
+        <p>Na prática</p>
+        <p>O website do Vale Lab 4, da Universidade da Califórnia, disponibiliza um artigo intitulado “Sharing memory between processes”, tratando do compartilhamento de memória entre processos. Neste site há uma explicação teórica sobre o assunto e também uma prática para a criação de segmentos de memória para serem compartilhados entre processos em linguagem C.</p>
+    
+    <h2>2. Uso de processos e threads</h2>
+    
+    
+    <h2>3. Implementação de mutex e semáforo</h2>
+
+</body>
+</html>
