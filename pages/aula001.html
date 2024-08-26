@@ -8,7 +8,7 @@
 <body>
     <h1>Sistemas Distribuídos</h1>
 
-    <h2>Introdução.</h2>
+    <h2>1.Introdução.</h2>
     <p>A computação, em seu estágio inicial, era focada na centralização de seu processamento, e os principais atores desse modelo foram o mainframe e os terminais de acesso. Com o passar do tempo, foi proposta uma mudança dessa arquitetura centralizada e rígida, através da descentralização do processamento, quando surgiram, então, os primeiros sistemas distribuídos.</p>
 
     <p>Desde então, os sistemas distribuídos têm evoluído, sendo uma área da computação que se relaciona com o nosso dia a dia, por meio, por exemplo, de serviços e aplicações web, computação peer-to-peer e redes de sensores.</p>
@@ -62,21 +62,65 @@
 
     <p>Atender aos requisitos dos usuários e de aplicações é um fator fundamental para o sucesso de um sistema distribuído; portanto, é muito importante conhecer os desafios e mecanismos de melhorias. A Amazon Web Services é uma empresa líder no segmento de aplicações que utiliza sistemas distribuídos e conhece muito bem os desafios para uma correta implementação. Em seu site oficial, disponibilizou o artigo “Desafios com sistemas distribuídos”, de Jacob Gabrielson, para leitura.</p>
 
-    <p>Segundo Tanebaum e Van Steen, os sistemas distribuídos são divididos em três:</p>
-    <ul>
-        <li>Sistemas de Computação distribuídos</li>
-        <li>Sistemas de informação distribuídos</li>
-        <li>Sistemas distribuídos pervasivos</li>
-    </ul>
+    <h2>2. Modelos de sistemas distribuídos</h2>
 
-    <h3>Sistemas de computação distribuídos</h3>
-    <p>O principal objetivo é execução de tarefas de computação de alto desempenho. Dividido em dois grupos:</p>
-    <ul>
-        <li>Computação em CLUSTER</li>
-    </ul>
+    <p>Como já abordado anteriormente, os sistemas distribuídos são computadores independentes conectados por uma rede de comunicação, sendo que para o usuário final trata-se de um único dispositivo provendo serviço. Em relação ao objetivo desses sistemas, Tanenbaum e Van Steen (2008) dividem os sistemas distribuídos em três tipos:</p>
 
-    <h2>Linguagem de programação PYTHON</h2>
+    <ol>
+        <li>Sistemas de computação distribuídos: relacionados às atividades de computação de alto desempenho.</li>
 
+        <li>Sistemas de informação distribuídos: utilizados em empresas com grandes quantidades de aplicações que precisam ser integradas (interoperabilidade).</li>
+                
+        <li>Sistemas distribuídos pervasivos: utilizados em cenários que requerem mobilidade.</li>
+    </ol>
+
+    <h4>Para saber mais</h4>
+
+    <p>O site top500.org mantém uma lista com os 500 computadores mais rápidos do mundo, na qual o Brasil aparece com o supercomputador Santos Dumont (SDumont), que possui um total de 18.144 núcleos de CPU, distribuídos em 756 nós computacionais com 64 GB de memória cada. Mais informações sobre o SDumont podem ser obtidas a partir de uma pesquisa simples em sites de busca, usando as palavras-chave “sdumont” e “machine”. Acesse o site top500.org, clique em “TOP500 LIST” e fique por dentro de tudo que acontece no universo dos supercomputadores.</p>
+
+    <h3>2.1    Sistemas de computação distribuídos</h3>
+
+    <p>Os sistemas de computação distribuídos têm como principal objetivo a execução de tarefas de computação de alto desempenho, divididas em dois subgrupos: computação de cluster e computação em grade.</p>
+
+    <p>A computação de cluster é constituída de hardwares, geralmente do mesmo tipo, denominados mestre e nó de comunicação, conectados por meio de uma rede local de alta velocidade, na qual um programa é executado em paralelo em várias máquinas.</p>
+
+    <p>Já na computação em grade os dispositivos são diferentes em relação ao hardware, ao software e à tecnologia empregada, com recursos de distintas organizações agrupados para permitir a colaboração de um grupo de pessoas.</p>
+
+    <h4>Na prática</h4>
+
+    <p>O projeto Beowulf.org é um exemplo prático da computação de cluster. Trata-se de clusters de alta performance que utilizam hardware comum, rede e software aberto, com o objetivo de baratear custos em relação às soluções de mercado. Fazendo uma pesquisa simples em sites de busca com as palavras-chave “beowulf” e “cluster”, pode-se obter mais informações sobre o tema.</p>
+
+    <p>Já o projeto SETI@Home é um programa de computação em grade da Universidade da Califórnia que visa obter evidências de vida inteligente extraterrestre utilizando o processamento de mais de 330 mil computadores. Mais detalhes sobre esse projeto podem ser obtidos com uma pesquisa simples em sites de busca pela expressão “seti@home”. </p>
+
+    <h3>2.2    Sistemas de informação distribuídos</h3>
+
+    <p>A arquitetura cliente/servidor proporcionou a utilização de programas que eram executados diretamente no servidor, e, posteriormente, esse mesmo servidor enviava uma resposta aos seus clientes remotos.</p>
+
+    <p>Com o avanço da computação e a evolução do setor, esse modelo passou a não atender de forma satisfatória aos requisitos de novas demandas dos clientes, requerendo que as aplicações soubessem se comunicar entre si. Portanto, os dados envolvidos nas transações deveriam ser distribuídos entre vários servidores.</p>
+
+    <p>Assim, foi requerida a presença de um monitor de transação (TP monitor), responsável pela coordenação e execução da transação, com a função de permitir o acesso a vários servidores e bancos de dados.</p>
+
+    <p>Na figura 3, é descrita uma aplicação cliente que envia uma requisição, a qual chega ao monitor TP, que direciona para um dos três servidores disponíveis, retornando em seguida uma resposta para a aplicação cliente.</p>
+
+    <p>A necessidade de diálogo entre aplicações originou modelos diferentes de comunicação, destacando-se (TANENBAUM; VAN STEEN, 2008):</p>
+
+    <ol>
+        <li>Chamadas de procedimento remoto (remote procedure calls – RPC): trata-se do envio de uma requisição a um outro componente, executando uma chamada de procedimento local.</li>
+
+        <li>Invocações de método remoto (remote method invocations – RMI): trabalha da mesma forma que as RPC, porém funciona com objeto em vez de com aplicações.</li>
+
+        <li>Middleware orientado à mensagem (message-oriented middleware – MOM): trabalha com o envio de mensagens (publicar/subscrever) para pontos lógicos de contato.</li>
+    </ol>
+
+    <img src="../image/image003.png" alt="Figura 3 – Monitor TP em sistemas distribuídos - Fonte: Tanenbaum e Van Steen (2008, p. 14).">
     
+    2.3    Sistemas distribuídos pervasivos
+
+    <p>Os sistemas distribuídos pervasivos relacionam-se a sensores, que possuem características próprias, tais como: tamanho pequeno, alimentação por bateria, mobilidade, ausência de controle administrativo humano e conexão sem fio. Tais características são diferentes das que vimos até agora, que eram focadas em nós fixos, conexão permanente e alta qualidade da rede. Redes de sensores são um exemplo de sistema distribuído pervasivo, que pode monitorar condições ambientais, tráfego, aplicações médicas, entre outras aplicações.</p>
+
+    <p>figura 4 apresenta uma rede de sensores em duas partes. A parte (a) da figura exibe uma rede de sensores na qual os dados gerados pelos nós sensores são enviados diretamente para um banco de dados. Na parte (b), é possível visualizar os nós sensores armazenando as informações localmente, sendo que os sensores somente enviam respostas às consultas que são realizadas diretamente a eles.</p>
+
+    <img src="../image/image004.png" alt="Figura 4 – Redes de sensores armazenando e processando dados - Fonte: Tanenbaum e Van Steen (2008, p. 18).">
+
 </body>
 </html>
