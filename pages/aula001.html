@@ -27,41 +27,40 @@
 
     <h2>Conceitos de Sistemas Distribuídos.</h2>
 
-    <h3>Qual o conceito de sistema distribuído?</h3>
-    <p>Segundo Tanenbaum e Van Steen, é um conjunto de computadores independentes, que se apresenta a seus usuários com único e coerente.</p>
-    <p>Atualmente as informações de rede de internet só é possível graças ao sistemas distribuído.</p>
+    <p>É importante mencionar que existem várias definições de sistemas distribuídos presentes na literatura; dois elementos são comuns a todas elas: computadores e redes. De uma maneira geral, todas as definições concluem que sistemas distribuídos são computadores interligados em rede que se comunicam e coordenam suas ações através de mensagens. Neste capítulo, utilizaremos a definição de Tanenbaum e Van Steen (2008, p. 1): “Um sistema distribuído é um conjunto de computadores independentes que se apresenta a seus usuários como um sistema único e coerente”.</p>
 
-    <h4>Caracteristica</h4>
-    <ul>
-        <li>Compartilhar recursos</li>
-        <li>Distância não é problema</li>
-        <li>comunicação entre computadores</li>
-    </ul>
+    <p>Portanto, o compartilhamento de recursos é um dos principais objetivos da existência dos sistemas distribuídos, e a distância não é um impeditivo para a interligação dos componentes, de modo que eles podem estar separados por qualquer distância: podem estar em diferentes continentes, regiões e prédios ou mesmo na mesma sala (COULOURIS; DOLLIMORE; KINDBERG, 2007).</p>
+    
+    <p>Em vista disso, para que seja possível a comunicação entre os computadores e redes heterogêneas, proporcionando uma visão de sistema único, é necessária uma camada de abstração chamada de middleware. Na figura 1, é mostrado o sistema distribuído organizado como middleware, sendo possível visualizar quatro computadores interligados em rede e três aplicações (A, B e C). A aplicação B está sendo executada de maneira distribuída nos computadores 2 e 3. A camada de software (middleware) se estende por todas as máquinas, proporcionando a mesma interface para cada aplicação.</p>
 
-    <h3>O que precisa para funcionar?</h3>
-    <p>Para funcionar é preciso uma camada de abstração, chamada "MIDDLEWARE".</p>
+    <img src="../image/image001.png" alt="Sistema distribuído organizado como middlewar, com 04 computadores interligados por uma camada do sistema distríbuido">
 
-    <h4>Exemplos de Sistemas Distribuídos</h4>
+    <p>Para que fique clara a contextualização de um sistema distribuído, é importante mencionar exemplos reais. Alguns exemplos clássicos são: a internet, as intranets, as tecnologias baseadas em dispositivos móveis e as aplicações e os serviços baseados em computação em nuvem e internet das coisas.</p>
 
-    <ul>
-        <li>internet</li>
-        <li>intranet</li>
-        <li>tecnologia de dispositivos móveis</li>
-        <li>serviços de computação em nuvem</li>
-        <li>IOT - internet das coisas</li>
-    </ul>
-
-    <p>Segundo Couloris, Dellimore e Kindberg, a internet é um conjunto de redes de computadores interligados. Acessando a "W W W", transferindo arquivos e etc... </p>
-    <p>A intranet, faz parte da innternet mas com restrições de acesso e com permissões de administradores.</p>
-    <p>Atender expectativas dos usuários, respeitando os 04 requisitos básicos como:</p>
-    <ul>
-        <li>fácil acesso</li>
-        <li>ocultar que os recursos são distribuídos por uma rede</li>
-        <li>deve ser aberta</li>
-        <li>deve poder ser expandida</li>
-    </ul>
-
+    <p>Segundo Coulouris, Dollimore e Kindberg (2007), a internet é um conjunto de redes de computadores de diferentes tipos que são interligadas, permitindo que os usuários, onde quer que estejam, façam uso de diversos serviços, tais como: world wide web (www), transferência de arquivos, entre outros. Já a intranet faz parte da internet, porém é administrada de forma separada e com limites para que somente usuários internos e com permissão a acessem.</p>
     <h2>Modelos de Sistemas Distribuídos</h2>
+
+    <h4>Para saber mais</h4>
+
+    <p>O Nic.Br é uma entidade sem fins lucrativos com funções administrativas e operacionais relativas ao domínio de internet “br”. Em seu canal oficial no YouTube, há uma série de vídeos explicando como funciona a internet, e destacamos estes dois: </p>
+
+    <ul>
+        <li>“Como funciona a internet? Parte 1: o protocolo IP”</li>
+        <li>“Como funciona a internet? Parte 2: sistemas autônomos, BGP, PTTs”</li>
+    </ul>
+
+    <p>Adicionalmente, recomendamos o vídeo “A internet das coisas”, também disponível no canal do Nic.Br, com um bom conteúdo sobre o tema</p>
+
+    <p>Sistemas distribuídos procuram atender às necessidades dos usuários, tais como desempenho, interoperabilidade, disponibilidade, entre outras. E para atender a essas necessidades de forma que a experiência seja positiva para o usuário, eles devem respeitar alguns requisitos básicos. Segundo Tanenbaum e Van Steen (2008), existem quatro metas importantes que devem ser cumpridas para que o esforço da implementação desses sistemas seja positivo. São elas:</p>
+
+    <img src="../image/image002.png" alt="Figura 2 – Metas para implementação de sistemas distribuídos
+    Fonte: Adaptado de Tanenbaum e Van Steen (2008, p. 3).">
+
+    <p>Portanto, a utilização de sistemas distribuídos é diferente das soluções tradicionais de aplicações, devido ao fato de os componentes estarem separados por uma rede, evitando-se, assim, problemas de confiabilidade, segurança, heterogeneidade, latência, largura de banda e administrações.</p>
+
+    <h4>Importante</h4>
+
+    <p>Atender aos requisitos dos usuários e de aplicações é um fator fundamental para o sucesso de um sistema distribuído; portanto, é muito importante conhecer os desafios e mecanismos de melhorias. A Amazon Web Services é uma empresa líder no segmento de aplicações que utiliza sistemas distribuídos e conhece muito bem os desafios para uma correta implementação. Em seu site oficial, disponibilizou o artigo “Desafios com sistemas distribuídos”, de Jacob Gabrielson, para leitura.</p>
 
     <p>Segundo Tanebaum e Van Steen, os sistemas distribuídos são divididos em três:</p>
     <ul>
